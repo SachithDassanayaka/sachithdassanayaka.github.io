@@ -53,7 +53,7 @@
         bisectDate = d3.bisector(function(d) { return d.year; }).left;
 
         //Read the data
-        d3.csv("./datasets/cross.xlsx", function(error, data) {
+        d3.csv("cross.xlsx", function(error, data) {
             if (error) throw error;
             //format data
             data.forEach(function (d) {
