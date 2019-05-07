@@ -1,7 +1,11 @@
-# How to make those 3D data visualizations
+data-projector
+==============
 
-You have a CSV file with cluster IDs and x,y,z coordinates. The columns in this file are `[ 'cid', 'x', 'y', 'z' ]`. 
+See http://datacratic.com/site/blog/visualizing-high-dimensional-data-browser-svd-t-sne-and-threejs for details on this project.
 
-Use `csv2json.py` to convert `data.csv` to `data.json`. Copy `data.json` to `data-projector` directory, open `index.html` in that directory with a browser*.
+A live demo of this code is available here: http://opensource.datacratic.com/data-projector/
 
-*<span style="font-size: small;">Chrome won't work when opening the file from a local disk.</span>
+To rebuild from coffeescript source:
+
+    $ npm install
+    $ node_modules/.bin/browserify -t coffeeify src/DataProjector.coffee > DataProjector.js
